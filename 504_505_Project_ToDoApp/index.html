@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive To-Do App with Dates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="todo-card">
+        <div class="todo-header">
+            <div>
+                <h1>Task Manager</h1>
+                <p>Keep track of your daily goals</p>
+            </div>
+            <span id="task-count" class="badge">0 Tasks</span>
+        </div>
+
+        
+        <div class="filter-container">
+            <button class="btn-filter active" data-filter="all">All</button>
+            <button class="btn-filter" data-filter="pending">Pending</button>
+            <button class="btn-filter" data-filter="completed">Completed</button>
+        </div>
+
+        <form id="todo-form">
+            <div class="form-inputs">
+                <input 
+                    type="text" 
+                    id="todo-input" 
+                    placeholder="What needs to be done?" 
+                    required
+                >
+                <input 
+                    type="date" 
+                    id="todo-date" 
+                    required
+                >
+            </div>
+            <button type="submit" class="btn-add">Add Task</button>
+        </form>
+
+        <div class="list-container">
+            <ul id="todo-list">
+            </ul>
+            
+            <div id="empty-state" class="empty-state hidden">
+                <p>All caught up! Enjoy your day ✨</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
