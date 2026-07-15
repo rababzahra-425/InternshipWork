@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:#f2f2f2;
+    font-family:Arial, sans-serif;
+    padding:20px;
+}
+
+.calculator{
+    width:100%;
+    max-width:360px;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+#display{
+    width:100%;
+    height:60px;
+    margin-bottom:15px;
+    padding:10px;
+    font-size:2rem;
+    text-align:right;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+button{
+    height:60px;
+    font-size:1.4rem;
+    border:none;
+    border-radius:8px;
+    background:#e6e6e6;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+button:hover{
+    background:#d4d4d4;
+}
+
+button:active{
+    transform:scale(0.96);
+}
+
+.zero{
+    grid-column:span 2;
+}
+
+/* Tablets */
+@media (max-width:768px){
+
+    .calculator{
+        max-width:330px;
+    }
+
+    button{
+        height:58px;
+        font-size:1.3rem;
+    }
+
+    #display{
+        height:58px;
+        font-size:1.8rem;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:480px){
+
+    body{
+        padding:15px;
+    }
+
+    .calculator{
+        padding:15px;
+    }
+
+    button{
+        height:55px;
+        font-size:1.2rem;
+    }
+
+    #display{
+        height:55px;
+        font-size:1.6rem;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:320px){
+
+    button{
+        height:48px;
+        font-size:1rem;
+    }
+
+    #display{
+        height:50px;
+        font-size:1.3rem;
+    }
+
+}
